@@ -1,3 +1,5 @@
+//最近点对问题，二维数组指针作为函数参数或返回值
+
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -19,16 +21,16 @@ aa getRandom() {
 		cout << "(" << array[i][0] << "," << array[i][1] << ")";   //x = array[i][0], y = array[i][1]
 		cout << endl;
 	} 
-	return array;
+	return array;  //返回二维数组指针
 }
 
 
 int main(void) {
-	//一个指向二维数组的指针 
-	int (*p)[2] = getRandom();;
+	
+	int (*p)[2] = getRandom();//一个指向二维数组的指针 
 	int distMin = 10000; //最短距离
 	int Xmin1, Ymin1, Xmin2, Ymin2;  // 最短点对 
-//	cout << p[0][1] << endl;
+	//cout << p[0][1] << endl;
 	//最近点对
 	for(int i = 0; i < 20; i++) {
 		for(int j = i + 1; j < 20; j++){
